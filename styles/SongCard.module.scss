@@ -31,22 +31,27 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 2px solid black;
+    border: 1px solid black;
     .plus{
         width: 18px;
-        height: 4px;
+        height: 3px;
         border-radius: 4px;
         background-color: black;
         position: absolute;
         &:nth-child(2){
             transform: rotate(90deg);
+            transition: .5s;
         }
     }
     .minus{
         width: 18px;
-        height: 4px;
+        height: 2px;
         border-radius: 4px;
         background-color: black;
         position: absolute;
+        transition: .5s;
+        &:nth-child(2){
+            opacity: 0;
+        }
     }
 }
