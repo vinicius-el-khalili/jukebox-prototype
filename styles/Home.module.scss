@@ -1,4 +1,6 @@
-.hey{
-    border: 1px dashed blue;
-    min-height: 150vh;
+.container{
+    padding: .5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
 }
