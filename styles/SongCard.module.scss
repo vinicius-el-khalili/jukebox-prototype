@@ -1,0 +1,53 @@
+.container{
+    width: 100%;
+    height: auto;
+    border: 1px solid black;   
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    padding: .5rem 1rem .5rem 1rem;
+}
+
+.imgContainer{
+    position: relative;
+    border: 2px solid gray;
+}
+
+.info{
+    padding: .5rem;
+    width:100%;
+    h1{
+        font-size: 1.2rem;
+    }
+    p{
+        font-size: .8rem;
+    }
+}
+
+.addButton{
+    width: 35px;
+    height: 35px;
+    border-radius: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    .plus{
+        width: 18px;
+        height: 4px;
+        border-radius: 4px;
+        background-color: black;
+        position: absolute;
+        &:nth-child(2){
+            transform: rotate(90deg);
+        }
+    }
+    .minus{
+        width: 18px;
+        height: 4px;
+        border-radius: 4px;
+        background-color: black;
+        position: absolute;
+    }
+}

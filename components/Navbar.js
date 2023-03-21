@@ -24,8 +24,8 @@ const Navbar = () => {
         }>
 
             <div className={style.menuButton}>Perfil</div>
-            <div className={style.menuButton}>Playlist</div>
             <div className={style.menuButton}>Comanda</div>
+            <div className={style.menuButton}>Logout</div>
         </div>
 
     </> );
