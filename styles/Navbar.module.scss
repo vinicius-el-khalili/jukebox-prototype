@@ -2,6 +2,7 @@
 
 .navBarContainer{
 
+    background-color: white;
     font-size: 1.2rem;
     border: 1px dashed green;
     position: fixed;
@@ -21,7 +22,7 @@
     margin-top: 60px;
     position: fixed;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
