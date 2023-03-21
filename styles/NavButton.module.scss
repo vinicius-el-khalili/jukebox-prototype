@@ -1,0 +1,37 @@
+.navButtonContainer{
+    
+    $size:36px;
+    width: $size;
+    height: $size;
+    border: 1px solid grey;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    margin: 12px;
+    .bar{
+        
+        width: 24px;
+        height: 3px;
+        background-color: black;
+        transition: .5s;
+
+    }
+
+}
+.on{
+    .bar{
+        position: absolute;
+        &:nth-child(1){
+            transform: rotate(45deg);
+        }
+        &:nth-child(2){
+            opacity: 0;
+        }
+        &:nth-child(3){
+            transform: rotate(-45deg);
+        }
+    }
+    
+}

@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Fasthand&display=swap');
+
+.navBarContainer{
+
+    font-family: 'Fasthand', cursive;
+    font-size: 1.2rem;
+    border: 1px dashed green;
+    position: fixed;
+    width: 100%;
+    display: flex;
+
+    .navTitle{
+        margin: auto;
+        transform: translate(35px);
+    }
+}
