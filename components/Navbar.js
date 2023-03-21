@@ -18,6 +18,15 @@ const Navbar = () => {
             </h2>
             <NavButton activate={mode} handle={toggle}/>
         </div>
+        <div className={
+            mode?
+            style.navMenuOn:style.navMenuOff
+        }>
+
+            <div className={style.menuButton}>Perfil</div>
+            <div className={style.menuButton}>Playlist</div>
+            <div className={style.menuButton}>Comanda</div>
+        </div>
 
     </> );
 }
