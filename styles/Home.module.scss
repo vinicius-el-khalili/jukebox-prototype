@@ -2,5 +2,12 @@
     padding: .5rem;
     display: flex;
     flex-direction: column;
-    gap: 6px;
+    align-items: center;
+}
+.userImg{
+    width: 120px;
+    height: 120px;
+    border: 1px solid black;
+    border-radius: 100%;
+    
 }

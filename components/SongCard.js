@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useContext } from "react";
 import AppContext from "@/context/AppContext";
 
-const SongCard = ({artist,song,img}) => {
+const SongCard = ({song}) => {
     const context = useContext(AppContext)
     const [added,setAdded] = useState(false)
     function handleClick(){
@@ -13,8 +13,6 @@ const SongCard = ({artist,song,img}) => {
         setAdded(false):
         setAdded(true);
 
-        context.setSongList(context.state.songList+[artist])
-
     }
     return (
         <>
@@ -22,10 +20,10 @@ const SongCard = ({artist,song,img}) => {
         <div className={style.container}
         style={added?{backgroundColor:"#DDDDDD"}:{}}
         >
-            <Image className={style.imgContainer} src={img} height={60} width={60}></Image>
+            <Image className={style.imgContainer} src={song.img} height={60} width={60}></Image>
             <div className={style.info}>
-                <h1>{song}</h1>
-                <p>{artist}</p>
+                <h1>{song.title}</h1>
+                <p>{song.artist}</p>
             </div>
             <div
             className={style.addButton}

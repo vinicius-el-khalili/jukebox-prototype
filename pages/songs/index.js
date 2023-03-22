@@ -9,7 +9,7 @@ export default function Home() {
     <div className={style.container}>
       {context.songs.map(song=>{
         return(
-          <SongCard song={song.title} artist={song.artist} key={"songCard_"+song._id} img={song.img} />
+          <SongCard song={song} key={"songCard_"+song._id}/>
           )
       })}
     </div>
