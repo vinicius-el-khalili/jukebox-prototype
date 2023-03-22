@@ -7,7 +7,13 @@ export default function Home() {
   const context = useContext(AppContext)
   return (
     <div className={style.container}>
-      <button onClick={()=>{context.setSongList(["yo","nice"])}}>{context.state.songList}</button>
+      <p>{context.songs.map(song=>{
+        return(
+          <div key={"song"+song._id}>
+            <h1>{song.title}</h1>
+          </div>
+        )
+      })}</p>
       <SongCard song={"Push"} artist={"Madonna"}/>
       <SongCard song={"Redbone"} artist={"Childish Gambino"}/>
       <SongCard song={"American Brazilian Indian Boy"} artist={"Estelle feat. Kanye West"}/>

@@ -17,7 +17,8 @@ export default function App({ Component, pageProps }) {
       state:{
         songList: songList
       },
-      setSongList: setSongList
+      setSongList: setSongList,
+      songs:songs
     }}
     
     >
