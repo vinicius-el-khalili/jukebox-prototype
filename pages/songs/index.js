@@ -7,7 +7,11 @@ export default function Home() {
   const context = useContext(AppContext)
   return (
     <div className={style.container}>
-      Home
+      {context.songs.map(song=>{
+        return(
+          <SongCard song={song.title} artist={song.artist} key={"songCard_"+song._id} img={song.img} />
+          )
+      })}
     </div>
   )
 }
