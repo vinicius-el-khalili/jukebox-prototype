@@ -3,11 +3,11 @@ import SongCard from '@/components/SongCard'
 import { useContext } from 'react'
 import AppContext from '@/context/AppContext'
 
-export default function Home() {
+export default function Profile() {
   const context = useContext(AppContext)
   return (
     <div className={style.container}>
-      Home
+      <div className={style.userImg} />
     </div>
   )
 }
