@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useContext } from "react";
 import AppContext from "@/context/AppContext";
 
-const SongCard = ({artist,song}) => {
+const SongCard = ({artist,song,img}) => {
     const context = useContext(AppContext)
     const [added,setAdded] = useState(false)
     function handleClick(){
@@ -22,7 +22,7 @@ const SongCard = ({artist,song}) => {
         <div className={style.container}
         style={added?{backgroundColor:"#DDDDDD"}:{}}
         >
-            <Image className={style.imgContainer} src={"/cd.jpg"} height={60} width={60}></Image>
+            <Image className={style.imgContainer} src={img} height={60} width={60}></Image>
             <div className={style.info}>
                 <h1>{song}</h1>
                 <p>{artist}</p>
