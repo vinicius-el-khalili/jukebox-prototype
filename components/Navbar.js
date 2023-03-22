@@ -23,8 +23,6 @@ const Navbar = () => {
             style.navMenuOn:style.navMenuOff
         }>
 
-            <div className={style.menuButton}>Perfil</div>
-            <div className={style.menuButton}>Comanda</div>
             <div className={style.menuButton}>Logout</div>
         </div>
 

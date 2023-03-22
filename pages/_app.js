@@ -10,13 +10,17 @@ import songs from '@/context/songsJson'
 
 export default function App({ Component, pageProps }) {
 
+  const [coins,setCoins] = useState(5)
   const [songList,setSongList] = useState([])
+  
   return (
     <AppContext.Provider
     value={{
       state:{
+        coins:coins,
         songList: songList
       },
+      setCoins:setCoins,
       setSongList: setSongList,
       songs:songs
     }}
