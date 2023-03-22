@@ -9,10 +9,12 @@ const SongCard = ({song}) => {
     const [added,setAdded] = useState(false)
     function handleClick(){
 
-        added?
-        setAdded(false):
-        setAdded(true);
-
+        if (!added){
+            setAdded(true)
+            context.setSongList([...context.state.songList,...[song]])
+        }else{
+            setAdded(false)
+        }
     }
     return (
         <>
