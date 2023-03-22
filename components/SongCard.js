@@ -18,8 +18,8 @@ const SongCard = ({song}) => {
             setAdded(false)
             context.setSongCardFlag[song._id](false)
             context.setCoins(context.state.coins+1)
-
         }
+        
     }
     return (
         <>
