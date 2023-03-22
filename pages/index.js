@@ -13,10 +13,10 @@ export default function Home() {
         <div className={style.userName}>Username</div>
         <div className={style.userCoins}>
           <p>Fichas:</p>
-          <p> {context.state.coins}</p>  
-        </div>  
+          <p>{context.state.coins}</p>
+        </div>
+        
       </div>
-
 
     </div>
   )

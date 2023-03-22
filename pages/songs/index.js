@@ -1,4 +1,4 @@
-import style from '@/styles/Home.module.scss'
+import style from '@/styles/Songs.module.scss'
 import SongCard from '@/components/SongCard'
 import { useContext } from 'react'
 import AppContext from '@/context/AppContext'
