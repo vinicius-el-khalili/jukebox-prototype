@@ -7,9 +7,17 @@ export default function Home() {
   const context = useContext(AppContext)
   return (
     <div className={style.container}>
-      <div className={style.userImg} />
-      <div className={style.userName}>Username</div>
-      <div className="">Fichas: {context.state.coins}</div>
+
+      <div className={style.userCard}>
+        <div className={style.userImg} />
+        <div className={style.userName}>Username</div>
+        <div className={style.userCoins}>
+          <p>Fichas:</p>
+          <p> {context.state.coins}</p>  
+        </div>  
+      </div>
+
+
     </div>
   )
 }
