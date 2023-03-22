@@ -5,7 +5,6 @@ import AppContext from '@/context/AppContext'
 
 export default function Home() {
   const context = useContext(AppContext)
-  console.log(context.state.songCardFlag)
 
   return (
     <div className={style.container}>
@@ -19,13 +18,20 @@ export default function Home() {
         </div>
       </div>
 
-      {
-      Object.keys(context.state.songCardFlag).map((_id,index)=>(
-        <p key={"p"+_id}>{_id} {context.state.songCardFlag[_id]?"True":"False"}</p> 
-        ))
-      }
+      { 
+        Object.keys(context.state.songCardFlag).map((_id,index)=>{
+          if (context.state.songCardFlag[_id]){
+            let song = context.songs.filter(s=>{return context.songs[parseInt(_id)]._id ===_id})
+            console.log("hmm")
+            return(
+              <div key={"kwp"+_id}>
+                Hey
+              </div>
+            )
+          }
+        }) 
       
-
+      }
 
     </div>
   )
