@@ -1,13 +1,20 @@
 import Image from "next/image";
 import style from "@/styles/SongCard.module.scss"
 import { useState } from "react";
+import { useContext } from "react";
+import AppContext from "@/context/AppContext";
 
 const SongCard = ({artist,song}) => {
+    const context = useContext(AppContext)
     const [added,setAdded] = useState(false)
     function handleClick(){
+
         added?
         setAdded(false):
-        setAdded(true)
+        setAdded(true);
+
+        context.setSongList(context.state.songList+[artist])
+
     }
     return (
         <>

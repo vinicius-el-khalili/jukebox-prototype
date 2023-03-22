@@ -1,11 +1,26 @@
 import '@/styles/globals.css'
+
+import { useState } from 'react'
+import AppContext from '@/context/AppContext'
 import Head from 'next/head'
 import Layout from '@/components/Layout'
+import songs from '@/context/songsJson'
+
+
 
 export default function App({ Component, pageProps }) {
 
+  const [songList,setSongList] = useState([])
   return (
-    <>
+    <AppContext.Provider
+    value={{
+      state:{
+        songList: songList
+      },
+      setSongList: setSongList
+    }}
+    
+    >
 
       <Head>
         <title>Jukebox</title>
@@ -16,6 +31,6 @@ export default function App({ Component, pageProps }) {
 
       <Layout><Component {...pageProps} /></Layout>  
 
-    </>
+    </AppContext.Provider>
   )
 }
