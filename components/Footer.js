@@ -11,21 +11,21 @@ const Footer = () => {
 
         <Link href={"/"} className={style.link}>
             <div className={style.icon}>
-                <Image src={"/home.svg"} width={iconSize} height={iconSize}/>
+                <Image src={"/home.svg"} width={iconSize} height={iconSize} alt={"icon"} />
                 Home
             </div>
         </Link>
 
         <Link href={"/search"} className={style.link}>
             <div className={style.icon}>
-                <Image src={"/search.svg"} width={iconSize} height={iconSize}/>
+                <Image src={"/search.svg"} width={iconSize} height={iconSize} alt={"icon"} />
                 Procurar
             </div>
         </Link>
         
         <Link href={"/songs"} className={style.link}>
             <div className={style.icon}>
-                <Image src={"/library.svg"} width={iconSize} height={iconSize}/>
+                <Image src={"/library.svg"} width={iconSize} height={iconSize} alt={"icon"} />
                 Músicas
             </div>
         </Link>

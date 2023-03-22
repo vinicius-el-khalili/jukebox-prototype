@@ -12,17 +12,24 @@ export default function App({ Component, pageProps }) {
 
   const [coins,setCoins] = useState(5)
   const [songList,setSongList] = useState([])
-  
+  var songCardFlag = {}
+  var setSongCardFlag = {}
+  songs.map( song => {
+    [songCardFlag[song._id],setSongCardFlag[song._id]] = useState(false)
+  })
+
   return (
     <AppContext.Provider
     value={{
       state:{
-        coins:coins,
-        songList: songList
+        coins,
+        songList,
+        songCardFlag,
       },
-      setCoins:setCoins,
-      setSongList: setSongList,
-      songs:songs
+      setCoins,
+      setSongList,
+      setSongCardFlag,
+      songs
     }}
     
     >

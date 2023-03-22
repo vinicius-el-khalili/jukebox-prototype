@@ -5,6 +5,8 @@ import AppContext from '@/context/AppContext'
 
 export default function Home() {
   const context = useContext(AppContext)
+  console.log(context.state.songCardFlag)
+
   return (
     <div className={style.container}>
       
@@ -17,7 +19,12 @@ export default function Home() {
         </div>
       </div>
 
-      {context.state.songList.map(song=>( <p key={"queued_"+song._id} >{song.title},{song.artist}</p> ))}
+      {
+      Object.keys(context.state.songCardFlag).map((_id,index)=>(
+        <p key={"p"+_id}>{_id} {context.state.songCardFlag[_id]?"True":"False"}</p> 
+        ))
+      }
+      
 
 
     </div>
