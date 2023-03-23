@@ -10,6 +10,7 @@
 .userCard{
     margin: 3rem;
     display: flex;
+    width: 100%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -43,6 +44,7 @@
 .queuedSong{
     display: flex;
     align-items: center;
+    width: 90vw;
     gap: 1rem;
     padding: 7px;
     padding-right: 1rem;
