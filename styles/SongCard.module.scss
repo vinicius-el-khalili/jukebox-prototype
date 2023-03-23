@@ -4,7 +4,10 @@
     display: grid;
     grid-template-columns: auto 1fr auto;
     align-items: center;
-    padding: .5rem 1rem .5rem 1rem;
+    padding: .5rem;
+    margin: .5rem;
+    border-radius: 6px;
+    box-shadow: 0 0 3px;
 }
 
 .imgContainer{
@@ -24,14 +27,15 @@
 }
 
 .addButton{
-    width: 35px;
-    height: 35px;
+    width:  30px;
+    height: 30px;
     border-radius: 100%;
     background-color: white;
     display: flex;
     justify-content: center;
     align-items: center;
     border: 1px solid black;
+    margin-right: .5rem;
     .plus{
         width: 18px;
         height: 3px;
