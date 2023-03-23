@@ -1,9 +1,10 @@
+import SearchBar from "@/components/SearchBar"
+import style from "@/styles/Search.module.scss"
+
 export default function Search(){
     return(
-    <>
-    
-    Search
-
-    </>
+    <div className={style.container}>
+        <SearchBar/>
+    </div>
     )
 }
