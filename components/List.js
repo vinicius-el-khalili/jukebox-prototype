@@ -1,9 +1,11 @@
-const ListResults = ({searchResults}) => {
+import SongCard from "./SongCard";
+
+const List = ({searchResults}) => {
     return (
     <>
     {
         searchResults.map( song => (
-            <p key={"6x5g"+song._id}>{song.title}</p>
+            <SongCard song={song} key={"6x5g"+song._id}/>
         ))
     }
     </>
