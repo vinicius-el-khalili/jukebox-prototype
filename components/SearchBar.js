@@ -4,6 +4,21 @@ import style from "@/styles/SearchBar.module.scss"
 import { useState, useContext } from "react"
 import AppContext from "@/context/AppContext"
 
+const FilteredList = ({songList}) => {
+    return (
+        <>
+        
+        {
+            songList.map( song => (
+                <div key={"9r5h"+song._id}>
+                    <p>{song.title}</p>
+                </div>
+            ))
+        }
+
+        </>
+    )
+}
 
 export default function SearchBar(){
 
@@ -12,14 +27,17 @@ export default function SearchBar(){
     const [songList,setSongList] = useState([])
 
     const onChange = (event)=>{
-        console.log("---------------------------------------------------------")
         setValue(event.target.value.toLowerCase())
-        const s = search()
+        console.log(value)
+        const result = search()
+        setSongList(result)
     }
 
     const search = () => {
         const result = context.songs.filter(song => {
-            console.log(song.title,value,song.title.toLowerCase().includes(value))
+            if (value==""){
+                return false
+            }
             return song.title.includes(value)
         })
         return result
@@ -31,11 +49,11 @@ export default function SearchBar(){
         <div className={style.container}>
             <input type="text" onChange={onChange} className={style.input} />
             <div className={style.svg}>
-                <Image src={"/search.svg"} height={30} width={30} alt="lupa"/>
+                <Image src={"/search.svg"} height={30} width={30} alt="icon" />
             </div>
         </div>
         <div style={{display:"flex",flexDirection:"column"}}>
-            
+            <FilteredList songList={songList} />
         </div>
 
         </>
