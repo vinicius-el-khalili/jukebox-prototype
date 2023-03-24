@@ -15,13 +15,6 @@ const Footer = () => {
                 Home
             </div>
         </Link>
-
-        <Link href={"/search"} className={style.link}>
-            <div className={style.icon}>
-                <Image src={"/search.svg"} width={iconSize} height={iconSize} alt={"icon"} />
-                Procurar
-            </div>
-        </Link>
         
         <Link href={"/songs"} className={style.link}>
             <div className={style.icon}>
