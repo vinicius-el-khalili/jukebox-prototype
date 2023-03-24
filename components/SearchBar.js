@@ -18,18 +18,19 @@ export default function SearchBar(){
     }
 
     return(
-        <>
-        
         <div className={style.container}>
-            <input type="text" onChange={e=>onChange(e)} className={style.input} />
-            <div className={style.svg}>
-                <Image src={"/search.svg"} height={30} width={30} alt="lupa"/>
-            </div>  
-        </div>
-        <div style={{display:"flex",flexDirection:"column"}}>
-            <List searchResults={results} />
-        </div>
+        
+            <div className={style.barContainer}>
+                <input type="text" onChange={e=>onChange(e)} className={style.input} />
+                <div className={style.svg}>
+                    <Image src={"/search.svg"} height={30} width={30} alt="lupa"/>
+                </div>  
+            </div>
+    
+            <div className={style.songsContainer}>
+                <List searchResults={results} />
+            </div>
 
-        </>
+        </div>
     )
 }

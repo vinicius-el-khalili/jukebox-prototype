@@ -25,7 +25,7 @@ const SongCard = ({song}) => {
         <>
         
         <div className={style.container}
-        style={added?{backgroundColor:"#DDDDDD"}:{}}
+        style={added?{backgroundColor:"#91f291"}:{}}
         >
             <Image className={style.imgContainer} src={song.img} height={60} width={60} alt={"cover"}></Image>
             <div className={style.info}>
